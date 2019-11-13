@@ -106,38 +106,34 @@ class _MyHomePageState extends State<MyHomePage> {
       children: <Widget>[
         InkWell(
           child: Text(
-            "关注1",
+            "首页",
             style: TextStyle(fontSize: 20, color: Colors.black),
           ),
-          onTap: () => print("点击 关注"),
+          onTap: () => print("点击 首页"),
         ),
         InkWell(
           child: Text(
-            "关注2",
+            "同城",
             style: TextStyle(fontSize: 20, color: Colors.black),
           ),
-          onTap: () => print("点击 关注"),
+          onTap: () => print("点击 同城"),
+        ),
+        IconButton(
+            icon: Icon(Icons.add_circle_outline, size: 36),
+            onPressed: () => print("点击 添加")),
+        InkWell(
+          child: Text(
+            "消息",
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          onTap: () => print("点击 消息"),
         ),
         InkWell(
           child: Text(
-            "关注3",
+            "我",
             style: TextStyle(fontSize: 20, color: Colors.black),
           ),
-          onTap: () => print("点击 关注"),
-        ),
-        InkWell(
-          child: Text(
-            "关注4",
-            style: TextStyle(fontSize: 20, color: Colors.black),
-          ),
-          onTap: () => print("点击 关注"),
-        ),
-        InkWell(
-          child: Text(
-            "关注5",
-            style: TextStyle(fontSize: 20, color: Colors.black),
-          ),
-          onTap: () => print("点击 关注"),
+          onTap: () => print("点击 我"),
         ),
       ],
     );
