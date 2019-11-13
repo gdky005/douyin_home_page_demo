@@ -148,6 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _secondCenterFloorWidget() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
         _secondCenterLeftFloorWidget(),
         _secondCenterRightFloorWidget(),
@@ -157,8 +158,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _secondCenterLeftFloorWidget() {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text("用户信息区域"),
+        Text("@ 作者名字"),
+        SizedBox(height: 20),
+        Text("短视频\n介绍\n区域", maxLines: 3, overflow: TextOverflow.ellipsis),
+        SizedBox(height: 20),
+        Row(
+          children: <Widget>[
+            Icon(Icons.music_note),
+            Text("音乐名称"),
+          ],
+        ),
+        SizedBox(height: 20),
       ],
     );
   }
