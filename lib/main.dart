@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -95,7 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             _secondTopFloorWidget(),
-            _secondBottomFloorWidget(),
+            Column(
+              children: <Widget>[
+                _secondCenterFloorWidget(),
+                _secondBottomFloorWidget(),
+              ],
+            ),
           ],
         ));
   }
@@ -135,6 +141,79 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           onTap: () => print("点击 我"),
         ),
+      ],
+    );
+  }
+
+  Widget _secondCenterFloorWidget() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        _secondCenterLeftFloorWidget(),
+        _secondCenterRightFloorWidget(),
+      ],
+    );
+  }
+
+  Widget _secondCenterLeftFloorWidget() {
+    return Column(
+      children: <Widget>[
+        Text("用户信息区域"),
+      ],
+    );
+  }
+
+  Widget _secondCenterRightFloorWidget() {
+    return Column(
+      children: <Widget>[
+        Stack(
+          alignment: Alignment.bottomCenter,
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.black),
+                  child: Icon(Icons.person_outline,
+                      size: 50, color: Colors.grey[400]),
+                ),
+                SizedBox(height: 10),
+              ],
+            ),
+            Container(
+              decoration:
+                  BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+              child: Icon(Icons.add, size: 25, color: Colors.white),
+            ),
+          ],
+        ),
+        SizedBox(height: 20),
+        Column(
+          children: <Widget>[
+            Icon(Icons.favorite, size: 50),
+            Text("48.7w"),
+          ],
+        ),
+        SizedBox(height: 20),
+        Column(
+          children: <Widget>[
+            Icon(Icons.comment, size: 50),
+            Text("1.4w"),
+          ],
+        ),
+        SizedBox(height: 20),
+        Column(
+          children: <Widget>[
+            Icon(Icons.screen_share, size: 42),
+            Text("2.4w"),
+          ],
+        ),
+        SizedBox(height: 20),
+        Container(
+          decoration:
+              BoxDecoration(shape: BoxShape.circle, color: Colors.black),
+          child: Icon(Icons.music_note, size: 50, color: Colors.white),
+        )
       ],
     );
   }
