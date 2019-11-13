@@ -92,6 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Padding(
         padding: EdgeInsets.all(16),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             _secondTopFloorWidget(),
             _secondBottomFloorWidget(),
@@ -101,11 +102,42 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _secondBottomFloorWidget() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
-        IconButton(
-          icon: Icon(Icons.search, size: 32),
-          onPressed: () => print("点击搜索"),
+        InkWell(
+          child: Text(
+            "关注1",
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          onTap: () => print("点击 关注"),
+        ),
+        InkWell(
+          child: Text(
+            "关注2",
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          onTap: () => print("点击 关注"),
+        ),
+        InkWell(
+          child: Text(
+            "关注3",
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          onTap: () => print("点击 关注"),
+        ),
+        InkWell(
+          child: Text(
+            "关注4",
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          onTap: () => print("点击 关注"),
+        ),
+        InkWell(
+          child: Text(
+            "关注5",
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          onTap: () => print("点击 关注"),
         ),
       ],
     );
